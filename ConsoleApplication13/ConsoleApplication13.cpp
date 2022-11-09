@@ -195,35 +195,32 @@ public:
 		}
 		int chek() //проверка на выигрыш (все три колонки содержат одинаковые по колонке символы)
 		{
-			int x = 0;
-			for (int r = 1; r < 4; r++)
+			int x = 1;
+			for (int r = 1; r < 5; r++)
 			{
-				if (arr[0][0].status == arr[r][0].status) { x = 1; }
-				else {x=0; break;}
+				if (arr[0][0].status == arr[r][0].status) { continue; }
+				else { x = 0; break; }
 
 			}
 			if (x == 1)
 			{
-				for (int r1 = 1; r1 < 4; r1++)
+				for (int r1 = 1; r1 < 5; r1++)
 				{
-					if (arr[0][2].status == arr[r1][2].status) { x = 1; }
+					if (arr[0][2].status == arr[r1][2].status) { continue; }
 					else { x = 0; break; }
 				}
 			}
 
 			if (x == 1)
 			{
-				for (int r2 = 1; r2 < 4; r2++)
+				for (int r2 = 1; r2 < 5; r2++)
 				{
-					if (arr[0][4].status == arr[r2][4].status) { x = 1; }
+					if (arr[0][4].status == arr[r2][4].status) { continue; }
 					else { x = 0; break; }
 				}
 			}
 			return x;
-
 		}
-
-	
 };
 int main()
 {
