@@ -199,7 +199,7 @@ public:
 			for (int r = 1; r < 4; r++)
 			{
 				if (arr[0][0].status == arr[r][0].status) { x = 1; }
-				else break;
+				else {x=0; break;}
 
 			}
 			if (x == 1)
